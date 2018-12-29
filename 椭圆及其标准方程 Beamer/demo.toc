@@ -1,0 +1,4 @@
+\beamer@sectionintoc {1}{复习}{2}{0}{1}
+\beamer@sectionintoc {2}{引入}{10}{0}{2}
+\beamer@sectionintoc {3}{如何画一个椭圆？什么是椭圆？}{13}{0}{3}
+\beamer@sectionintoc {4}{椭圆的标准方程}{46}{0}{4}
