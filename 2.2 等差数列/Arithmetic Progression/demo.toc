@@ -1,0 +1,9 @@
+\beamer@sectionintoc {1}{生活中的等差数列}{9}{0}{1}
+\beamer@sectionintoc {2}{等差数列的概念}{36}{0}{2}
+\beamer@subsectionintoc {2}{1}{等差数列的定义}{37}{0}{2}
+\beamer@subsectionintoc {2}{2}{小测验判断是否为等差数列}{39}{0}{2}
+\beamer@sectionintoc {3}{等差数列的通项公式}{64}{0}{3}
+\beamer@subsectionintoc {3}{1}{通项公式推导}{65}{0}{3}
+\beamer@subsectionintoc {3}{2}{通项公式定义}{84}{0}{3}
+\beamer@subsectionintoc {3}{3}{题型研究}{93}{0}{3}
+\beamer@sectionintoc {4}{知识回顾}{134}{0}{4}

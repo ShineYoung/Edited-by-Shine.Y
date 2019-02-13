@@ -1,0 +1,18 @@
+\frametitle{生活中的等差数列}
+
+^^I^^I哈雷彗星的回归年份:
+^^I^^I\begin{columns}
+^^I^^I^^I\column{0.6\textwidth}
+^^I^^I^^I^^I\begin{itemize}[<+- | +->]
+^^I^^I^^I^^I^^I\item 1682
+^^I^^I^^I^^I^^I\item 1758
+^^I^^I^^I^^I^^I\item 1834
+^^I^^I^^I^^I^^I\item 1910
+^^I^^I^^I^^I^^I\item 1986
+^^I^^I^^I^^I^^I\item 2062
+^^I^^I^^I^^I^^I\item \textbf{得到数列：}1682, 1758, 1834, 1910, 1986, 2062
+^^I^^I^^I^^I\end{itemize}
+^^I^^I^^I\column{0.4\textwidth}
+^^I^^I^^I^^I\includegraphics[width=\textwidth]{ap1.jpg}
+^^I^^I\end{columns}
+
