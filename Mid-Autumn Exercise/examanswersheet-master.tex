@@ -1,0 +1,374 @@
+\documentclass{book}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{multicol}
+\usepackage[UTF8]{ctex}
+\usepackage{tikz}
+
+\usepackage{ifthen}
+\newboolean{firstanswerofthechapter}
+
+\usepackage{xcolor}
+\colorlet{lightcyan}{cyan!40!white}
+
+\usepackage{chngcntr}
+\usepackage{stackengine}
+
+\usepackage{tasks}
+\newlength{\longestlabel}
+\settowidth{\longestlabel}{\bfseries viii.}
+\settasks{counter-format={tsk[r].}, label-format={\bfseries}, label-width=\longestlabel,
+    item-indent=0pt, label-offset=2pt, column-sep={10pt}}
+
+\usepackage[lastexercise,answerdelayed]{exercise}
+\counterwithin{Exercise}{chapter}
+\counterwithin{Answer}{chapter}
+\renewcounter{Exercise}[chapter]
+\newcommand{\QuestionNB}{\bfseries\arabic{Question}.\ }
+\renewcommand{\ExerciseName}{EXERCISES}
+\renewcommand{\ExerciseHeader}{\noindent\def\stackalignment{l}% code from https://tex.stackexchange.com/a/195118/101651
+    \stackunder[0pt]{\colorbox{cyan}{\textcolor{white}{\textbf{\LARGE\ExerciseHeaderNB\;\large\ExerciseName}}}}{\textcolor{lightcyan}{\rule{\linewidth}{2pt}}}\medskip}
+\renewcommand{\AnswerName}{Exercises}
+\renewcommand{\AnswerHeader}{\ifthenelse{\boolean{firstanswerofthechapter}}%
+    {\bigskip\noindent\textcolor{cyan}{\textbf{CHAPTER \thechapter}}\newline\newline%
+        \noindent\bfseries\emph{\textcolor{cyan}{\AnswerName\ \ExerciseHeaderNB, page %
+                \pageref{\AnswerRef}}}\smallskip}
+    {\noindent\bfseries\emph{\textcolor{cyan}{\AnswerName\ \ExerciseHeaderNB, page \pageref{\AnswerRef}}}\smallskip}}
+\setlength{\QuestionIndent}{16pt}
+
+\begin{document}
+    \chapter{直线、斜率与方程}
+
+      \begin{Exercise}\label{ex1.1}
+        \vspace{-\baselineskip}
+
+        \Question 倾斜角$\alpha$：$x$轴的\underline{\hspace{1cm}}和直线的\underline{\hspace{1cm}} 方向之间的夹角.且倾斜角的范围是：\underline{\hspace{52pt}}
+
+        \Question 已知两点 $ P_1(x_1,y_1), P_2(x_2,y_2) $, 求过 $P_1, P_2$ 的直线的斜率
+         $k_{P_1P_2}=\underline{\hspace{52pt}} $.
+
+        \Question 随着倾斜角的递增，斜率取值变化的示意图：
+
+        \begin{minipage}{0.7\textwidth}
+          $k$的取值范围：\underline{\hspace{52pt}}
+        \end{minipage}
+        \begin{minipage}{0.3\textwidth}
+          \begin{tikzpicture}
+    				\draw[->] (-1.2,0) -- (1.2,0) node[anchor=north west]{$x$};
+    				\draw[->] (0,-1.2) -- (0,1.2) node[anchor=south west]{$y$};
+    				\draw (0,0) node[anchor=north east]{$O$};
+    			\end{tikzpicture}
+        \end{minipage}
+
+        \Question 直线过两点$P_1(x_1,y_1), P_2(x_2,y_2)$, 则其斜率为$k=$\underline{\hspace{52pt}}($x_1 \neq x_2$).\\
+                  特别地，当直线垂直于$x$轴（竖着画）时，斜率\underline{\hspace{52pt}}.
+
+      \end{Exercise}
+
+      \begin{Exercise}
+        \vspace{-\baselineskip}
+
+          \Question 证明：三点 $ A(1,-1),B(4,-2),C(-2,0) $ 共线. \vspace{2cm}
+
+          \Question 证明：四点 $ A(1,-1),B(4,-2),C(-2,0),D(-5,1) $ 共线.\vspace{4cm}
+
+          \Question
+          \begin{minipage}{0.6\textwidth}
+            不能使用点斜式、截距式的直线类型为：
+          \end{minipage}
+          \begin{minipage}{0.4\textwidth}
+            \begin{tikzpicture}
+      				\draw[->] (-1,0) -- (1,0) node[anchor=north west]{$x$};
+      				\draw[->] (0,-1) -- (0,1) node[anchor=south west]{$y$};
+      				\draw (0,0) node[anchor=north east]{$O$};
+      			\end{tikzpicture}
+          \end{minipage}
+
+          \begin{minipage}{0.6\textwidth}
+            不能使用两点式的直线类型为：
+          \end{minipage}
+          \begin{minipage}{0.2\textwidth}
+            \begin{tikzpicture}
+      				\draw[->] (-1,0) -- (1,0) node[anchor=north west]{$x$};
+      				\draw[->] (0,-1) -- (0,1) node[anchor=south west]{$y$};
+      				\draw (0,0) node[anchor=north east]{$O$};
+      			\end{tikzpicture}
+          \end{minipage}
+          \begin{minipage}{0.2\textwidth}
+            \begin{tikzpicture}
+      				\draw[->] (-1,0) -- (1,0) node[anchor=north west]{$x$};
+      				\draw[->] (0,-1) -- (0,1) node[anchor=south west]{$y$};
+      				\draw (0,0) node[anchor=north east]{$O$};
+      			\end{tikzpicture}
+          \end{minipage}
+
+          \begin{minipage}{0.45\textwidth}
+            不能使用截距式的直线类型为：
+          \end{minipage}
+          \begin{minipage}{0.2\textwidth}
+            \begin{tikzpicture}
+      				\draw[->] (-1,0) -- (1,0) node[anchor=north west]{$x$};
+      				\draw[->] (0,-1) -- (0,1) node[anchor=south west]{$y$};
+      				\draw (0,0) node[anchor=north east]{$O$};
+      			\end{tikzpicture}
+          \end{minipage}
+          \begin{minipage}{0.2\textwidth}
+            \begin{tikzpicture}
+      				\draw[->] (-1,0) -- (1,0) node[anchor=north west]{$x$};
+      				\draw[->] (0,-1) -- (0,1) node[anchor=south west]{$y$};
+      				\draw (0,0) node[anchor=north east]{$O$};
+      			\end{tikzpicture}
+          \end{minipage}
+          \begin{minipage}{0.15\textwidth}
+            \begin{tikzpicture}
+      				\draw[->] (-1,0) -- (1,0) node[anchor=north west]{$x$};
+      				\draw[->] (0,-1) -- (0,1) node[anchor=south west]{$y$};
+      				\draw (0,0) node[anchor=north east]{$O$};
+      			\end{tikzpicture}
+          \end{minipage}
+
+          直线的一般式方程可以表示\textbf{所有直线}，其方程形式为\underline{\hspace{72pt}}($A,B$不能同时为$0$).
+
+      \end{Exercise}
+
+      \begin{Exercise}
+
+        \Question 直线$l$ 被两条直线$l_1:2x-3y+1=0$和$l_2:x+y-2=0$ 截得的线段的中点为$A(1,0)$, 求直线$l$的方程. \vspace{2cm}
+        \newpage
+
+        \Question 求函数$ y=\sqrt{x^2-20x+200}+\sqrt{x^2-2x+37} $的最小值. \vspace{3.5cm}
+
+        \Question 求点$A(1,0)$ 关于直线 $ l:y=-3x-4 $ 的对称点的坐标. \vspace{3.5cm}
+
+        \Question 已知直线$l:2x+y-1=0, A(-2,2), B(2,2)$, 请在$l$上找一点$P$, 使得$|BP|-|AP|$最大，并求出最大值. \vspace{3.5cm}
+
+        \Question 求直线$l:4x-y+2=0$ 关于点$A(0,1)$ 对称的直线的方程. \vspace{3.5cm}
+
+        \Question 求直线$l_1:4x-y+2=0$ 关于直线$l:2x+y-1=0$ 对称的直线$l_2$的方程.
+
+      \end{Exercise}
+
+      \begin{Exercise}
+
+        \Question $P_1(x_1,y_1), P_2(x_2,y_2)$连线线段的中点坐标公式：\underline{\hspace{52pt}}.
+
+        \Question （点点距）$P_1(x_1,y_1), P_2(x_2,y_2)$的距离公式：\underline{\hspace{102pt}}.
+
+        \Question （点线距）$P(x_0,y_0)$ 到直线$l:Ax+By+C=0$ 的距离公式：\underline{\hspace{102pt}}.
+
+        \Question （线线距）
+        \begin{minipage}{0.4\textwidth}
+          直线 $l_1:Ax+By+C_1=0$ \\
+          直线 $l_2:Ax+By+C_2=0$
+        \end{minipage}
+        \begin{minipage}{0.6\textwidth}
+          之间的距离为：\underline{\hspace{102pt}}.
+        \end{minipage}
+
+        \vspace{2cm}
+        最后，送给大家的中秋特惠，不用客气：
+        \begin{Exercise}
+
+          \begin{minipage}{0.5\textwidth}
+            解一下这些一元二次方程吧：
+
+            (1)$2x^2=3x$ \vspace{2cm}
+
+            (2)$(x+3)(x-6)=-8$ \vspace{2cm}
+
+            (3)$(x+1)^2-3(x+1)+2=0$ \vspace{2cm}
+
+            (4)$x^2+2ax-3a^2=0$（$a$为常数）
+          \end{minipage}
+          \begin{minipage}{0.5\textwidth}
+            再来试一下这些二元一次方程组：
+
+            \begin{displaymath}
+                (1)\left\{ \begin{array}{ll}
+                3x-y=7\\
+                x+2y=6
+                \end{array} \right.
+            \end{displaymath}\vspace{4.5cm}
+
+            \begin{displaymath}
+                (2)\left\{ \begin{array}{ll}
+                6x+7y-2=0\\
+                y=4x+3
+                \end{array} \right.
+            \end{displaymath}
+
+          \end{minipage}
+
+        \end{Exercise}
+
+
+      \end{Exercise}
+
+
+    %
+    % \begin{Exercise}\label{EX11}
+    %     \vspace{-\baselineskip}% <-- You don't need this line of code if there's some text here
+    %     \Question In problem \ref{EX11-1-i}-\ref{EX11-1-iii}, determine whether the given differential equation is separable
+    %     \begin{tasks}(2)
+    %         \task\label{EX11-1-i} $\frac{dy}{dx}-\sin{(x+y)}=0$
+    %         \task $\frac{dy}{dx}=4y^2-3y+1$
+    %         \task\label{EX11-1-iii} $\frac{ds}{dt}=t\ln{(s^{2t})}+8t^2$
+    %     \end{tasks}
+    %     \Question In problem \ref{EX11-2-iv}-\ref{EX11-2-viii}, solve the equation
+    %     \begin{tasks}[resume=true](2)
+    %         \task\label{EX11-2-iv} $\frac{dx}{dt}=3xt^2$
+    %         \task $y^{-1}dy+ye^{\cos{x}}\sin{x}dx=0$
+    %         \task $(x+xy^2)dx+ye^{\cos{x}}\sin{x}dx=0$
+    %         \task\label{EX11-2-viii} $\frac{dy}{dt} = \frac{y}{t+1} + 4t^2 +  4t$, $\quad$ $y(1) = 10$
+    %     \end{tasks}
+    % \end{Exercise}
+    % \setboolean{firstanswerofthechapter}{true}
+    % \begin{multicols}{2}
+    %     \begin{Answer}[ref={EX11}]
+    %         \Question
+    %         \begin{tasks}
+    %             \task This is a solution of Ex 1
+    %             \task This is a solution of Ex 2
+    %             \task This is a solution of Ex 3
+    %         \end{tasks}
+    %         \Question
+    %         \begin{tasks}[resume=true]
+    %             \task This is a solution of Ex 4
+    %             \task This is a solution of Ex 5
+    %             \task This is a solution of Ex 6
+    %             \task This is a solution of Ex 7
+    %         \end{tasks}
+    %     \end{Answer}
+    % \end{multicols}
+    % \setboolean{firstanswerofthechapter}{false}
+    %
+    % \begin{Exercise}\label{EX12}
+    %     Another exercise.
+    %     \Question If you don't need a horizontal list, you can simply use \verb|\Question|
+    % \end{Exercise}
+    % \begin{multicols}{2}
+    %     \begin{Answer}[ref={EX12}]
+    %         \Question This is a solution of Ex 1
+    %     \end{Answer}
+    % \end{multicols}
+
+    % \chapter{Second}
+    %
+    % \begin{Exercise}\label{EX21}
+    %     \vspace{-\baselineskip}% <-- You don't need this line of code if there's some text here
+    %     \Question Eight systems of differential equations and five direction fields are given below.  Determine the system that corresponds to each direction field and sketch the solution curves that correspond to the initial conditions $(x_0, y_0) = (0,1)$ and $(x_0, y_0) = (1,-1)$.
+    %     \begin{tasks}(3)
+    %         \task $\begin{aligned}
+    %         \frac{dx}{dt} & = -x \\
+    %         \frac{dy}{dt} & = y-1
+    %         \end{aligned}$
+    %         \task $\begin{aligned}
+    %         \frac{dx}{dt} & = x^2 - 1 \\
+    %         \frac{dy}{dt} & = y
+    %         \end{aligned}$
+    %         \task $\begin{aligned}
+    %         \frac{dx}{dt} & = x+2y \\
+    %         \frac{dy}{dt} & = -y
+    %         \end{aligned}$
+    %         \task $\begin{aligned}
+    %         \frac{dx}{dt} & = 2x \\
+    %         \frac{dy}{dt} & =  y
+    %         \end{aligned}$
+    %         \task $\begin{aligned}
+    %         \frac{dx}{dt} & = x \\
+    %         \frac{dy}{dt}  & = 2y
+    %         \end{aligned}$
+    %         \task$\begin{aligned}
+    %         \frac{dx}{dt} & = x-1 \\
+    %         \frac{dy}{dt} & = -y
+    %         \end{aligned}$
+    %         \task$\begin{aligned}
+    %         \frac{dx}{dt} & = x^2-1 \\
+    %         \frac{dy}{dt} & = -y
+    %         \end{aligned}$
+    %         \task $\begin{aligned}
+    %         \frac{dx}{dt} & = x- 2y \\
+    %         \frac{dy}{dt} & =  -y
+    %         \end{aligned}$
+    %     \end{tasks}
+    % \end{Exercise}
+    % \setboolean{firstanswerofthechapter}{true}
+    % \begin{multicols}{2}
+    %     \begin{Answer}[ref={EX21}]
+    %         \Question
+    %         \begin{tasks}
+    %             \task This is a solution of Ex 1
+    %             \task This is a solution of Ex 2
+    %             \task This is a solution of Ex 3
+    %             \task This is a solution of Ex 4
+    %             \task This is a solution of Ex 5
+    %             \task This is a solution of Ex 6
+    %             \task This is a solution of Ex 7
+    %             \task This is a solution of Ex 8
+    %         \end{tasks}
+    %     \end{Answer}
+    % \end{multicols}
+    % \setboolean{firstanswerofthechapter}{false}
+    % \newpage
+    % \begin{Exercise}\label{EX22}
+    %     Since these are systems, maybe it's better to put the \verb|aligned| enviroment within  \verb|\left\{| and \verb|\right.|:
+    %     \Question Eight systems of differential equations and five direction fields are given below.  Determine the system that corresponds to each direction field and sketch the solution curves that correspond to the initial conditions $(x_0, y_0) = (0,1)$ and $(x_0, y_0) = (1,-1)$.
+    %     \begin{tasks}(3)
+    %         \task $\left\{\begin{aligned}
+    %         \frac{dx}{dt} & = -x \\
+    %         \frac{dy}{dt} & = y-1
+    %         \end{aligned}\right.$
+    %         \task $\left\{\begin{aligned}
+    %         \frac{dx}{dt} & = x^2 - 1 \\
+    %         \frac{dy}{dt} & = y
+    %         \end{aligned}\right.$
+    %         \task $\left\{\begin{aligned}
+    %         \frac{dx}{dt} & = x+2y \\
+    %         \frac{dy}{dt} & = -y
+    %         \end{aligned}\right.$
+    %         \task $\left\{\begin{aligned}
+    %         \frac{dx}{dt} & = 2x \\
+    %         \frac{dy}{dt} & =  y
+    %         \end{aligned}\right.$
+    %         \task $\left\{\begin{aligned}
+    %         \frac{dx}{dt} & = x \\
+    %         \frac{dy}{dt}  & = 2y
+    %         \end{aligned}\right.$
+    %         \task$\left\{\begin{aligned}
+    %         \frac{dx}{dt} & = x-1 \\
+    %         \frac{dy}{dt} & = -y
+    %         \end{aligned}\right.$
+    %         \task $\left\{\begin{aligned}
+    %         \frac{dx}{dt} & = x^2-1 \\
+    %         \frac{dy}{dt} & = -y
+    %         \end{aligned}\right.$
+    %         \task $\left\{\begin{aligned}
+    %         \frac{dx}{dt} & = x- 2y \\
+    %         \frac{dy}{dt} & =  -y
+    %         \end{aligned}\right.$
+    %     \end{tasks}
+    % \end{Exercise}
+    % \begin{multicols}{2}
+    %     \begin{Answer}[ref={EX22}]
+    %         \Question
+    %         \begin{tasks}
+    %             \task This is a solution of Ex 1
+    %             \task This is a solution of Ex 2
+    %             \task This is a solution of Ex 3
+    %             \task This is a solution of Ex 4
+    %             \task This is a solution of Ex 5
+    %             \task This is a solution of Ex 6
+    %             \task This is a solution of Ex 7
+    %             \task This is a solution of Ex 8
+    %         \end{tasks}
+    %     \end{Answer}
+    % \end{multicols}
+    %
+    % \chapter{Answer to all problems}
+    %
+    % \begin{multicols}{2}\raggedcolumns
+    %     \shipoutAnswer
+    % \end{multicols}
+
+\end{document}
