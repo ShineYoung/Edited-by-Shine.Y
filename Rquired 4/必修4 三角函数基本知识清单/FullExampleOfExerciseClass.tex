@@ -1,0 +1,157 @@
+\documentclass[headheight=4.5cm,
+			   margin=2cm,
+			   titlewidth=0.6,
+			   sansserif,
+			   firstcolor=color1,
+			   secondcolor=color2,
+			   logo=myLogo.png,
+			   % footband=myFootBand.png
+			  ]{TelecomNancy}
+
+\definecolor{color1}{RGB}{100, 100, 100}
+\definecolor{color2}{RGB}{220, 0, 0}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{pifont}
+\usepackage{tikz}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{tabu}
+\usepackage{caption}
+\usepackage[UTF8]{ctex}
+
+\begin{document}
+
+	\coursetitle{三角函数 基本知识清单}
+	\courselevel{高中数学一年级}
+	\courseyear{2018.03.14}
+	
+	\globalinstructions[填空前的提示]
+	{
+		 在填这些空之前，希望大家能借助这次机会，将基本的知识性概念再熟络于心，千万不要忽视基础的威力，数学本身就是一门基础的学科，但是数学的影响力却非常物所能及. 
+	}
+
+		\nextExercise[任意角的三角函数]{}
+
+		\nextQuestion{正弦、余弦、正切函数值 在各象限的符号问题：\\
+		% 请仿照$\sin \alpha$在各坐标轴以及在各象限的符号情况，写出$\cos \alpha$及$\tan \alpha$的符号情况.\\
+		% \begin{minipage}{0.2\textwidth}
+		% 	\begin{tikzpicture}
+		% 		\draw[->] (-1.2,0) node[left]{$0$} -- (1.2,0) node[right]{$0$};
+		% 		\draw[->] (0,-1.2) node[below]{$-1$} node[below=10pt]{$\sin \alpha$} -- (0,1.2) node[above]{$1$};
+		% 		\draw (0,0) node[anchor=south west]{$+$} node[anchor=south east]{$+$} node[anchor=north east]{$-$} node[anchor=north west]{$-$};
+		% 	\end{tikzpicture}
+		% \end{minipage}
+		% \begin{minipage}{0.2\textwidth}
+		% 	\begin{tikzpicture}
+		% 		\draw[->] (-1.2,0) -- (1.2,0);
+		% 		\draw[->] (0,-1.2) node[below=10pt]{$\cos \alpha$} -- (0,1.2);
+		% 	\end{tikzpicture}
+		% \end{minipage}
+		% \begin{minipage}{0.2\textwidth}
+		% 	\begin{tikzpicture}
+		% 		\draw[->] (-1.2,0) -- (1.2,0);
+		% 		\draw[->] (0,-1.2) node[below=10pt]{$\tan \alpha$} -- (0,1.2);
+		% 	\end{tikzpicture}
+		% \end{minipage}
+		\begin{center}
+		% \begin{minipage}{0.5\textwidth}
+			\begin{tikzpicture}
+				\draw[->] (-1.2,0) -- (1.2,0);
+				\draw[->] (0,-1.2) -- (0,1.2);
+				\draw (0,0) node[anchor=south east]{$\sin$} node[anchor=north east]{$\tan$} node[anchor=north west]{$\cos$};
+			\end{tikzpicture}
+			\captionof{figure}{各象限为正值的三角函数分布情况}
+		% \end{minipage}
+		\end{center}
+
+		}
+
+		\nextQuestion{常用特殊角 三角函数值表：\\
+		\begin{tabular}{c|c|c|c|c|c|c|c|c|c|c}
+		\hline
+		角$\alpha$ & $\phantom{1}0^\circ\phantom{1}$ & $\phantom{1}30^\circ$ & $\phantom{1}45^\circ$ & $\phantom{1}60^\circ$ & $\phantom{1}90^\circ$ & $120^\circ$ & $135^\circ$& $150^\circ$ & $180^\circ$ & $270^\circ$\\
+		\hline
+		角$\alpha$的弧度数 & $\quad$ & $\quad$ & $\quad$ & $\quad$ & $\quad$ & $\quad$ & $\quad$ & $\quad$ & $\quad$ & $\quad$\\
+		\hline
+		$\sin\alpha$ & $\quad$ & $\quad$ & $\quad$ & $\quad$ & $\quad$ & $\quad$ & $\quad$ & $\quad$ & $\quad$ & $\quad$\\
+		\hline
+		$\cos\alpha$ & $\quad$ & $\quad$ & $\quad$ & $\quad$ & $\quad$ & $\quad$ & $\quad$ & $\quad$ & $\quad$ & $\quad$\\
+		\hline
+		$\tan\alpha$ & $\quad$ & $\quad$ & $\quad$ & $\quad$ & $\quad$ & $\quad$ & $\quad$ & $\quad$ & $\quad$ & $\quad$\\
+		\hline
+
+		\end{tabular}
+		}
+
+		\nextQuestion{同角三角函数的基本关系式：\\
+		$\sin^2\alpha+\cos^2\alpha=\underline{\hspace{0.5cm}} \quad \tan\alpha=\underline{\hspace{1cm}}$
+		}
+
+
+	\nextExercise[诱导公式]{口诀：“\textbf{奇变偶不变，符号看象限}”.\\
+	\ding{172} “奇”“偶”指“$\frac{\pi}{2}$”的奇数倍和偶数倍；\\
+	\ding{173} “变”与“不变”是指函数名称是否改变；\\
+	\ding{174} 把$\alpha$ 当作锐角 $\longrightarrow$ 找象限 $\longrightarrow$ 判断符号.
+	}
+
+		\begin{tabularx}{0.9\textwidth}{c|X|X|X|X|X|X|X|X|X}
+			\hline
+			 & $2k\pi+\alpha$ & $2\pi-\alpha$ & $\phantom{2}\pi+\alpha$ & $\phantom{2}\alpha-\pi$ & $\phantom{2}-\alpha$ & $\phantom{2}\frac{\pi}{2}-\alpha$ & $\phantom{2}\frac{\pi}{2}+\alpha$ & $\frac{3\pi}{2}-\alpha$ & $\frac{3\pi}{2}+\alpha$\\
+			\hline
+			$\sin$ & & & & & & & & & \\
+			\hline
+			$\cos$ & & & & & & & & & \\
+			\hline
+			$\tan$ & & & & & & & & & \\
+			\hline
+		\end{tabularx}
+
+	\newpage
+	
+	\nextExercise[和角差角 正弦、余弦、正切 公式]{}
+		\nextQuestion{和差角 正余弦、正切公式}
+			$\cos(\alpha+\beta)=\underline{\hspace{5cm}}$\\
+			$\cos(\alpha-\beta)=\underline{\hspace{5cm}}$\\
+			$\sin(\alpha+\beta)=\underline{\hspace{5cm}}$\\
+			$\sin(\alpha-\beta)=\underline{\hspace{5cm}}$\\
+			$\tan(\alpha+\beta)=$\\
+			$\phantom{\tan(\alpha+\beta)=}\underline{\hspace{5cm}}$\\
+			$\tan(\alpha-\beta)=$\\
+			$\phantom{\tan(\alpha+\beta)=}\underline{\hspace{5cm}}$\\
+		\nextQuestion{二倍角公式}
+			$\sin2\alpha=\underline{\hspace{5cm}}$\\
+			$\cos2\alpha=\underline{\hspace{5cm}}$\\
+			$\phantom{\cos2\alpha}=\underline{\hspace{5cm}}$\\
+			$\phantom{\cos2\alpha}=\underline{\hspace{5cm}}$\\
+			$\tan2\alpha=$\\
+			$\phantom{\tan2\alpha=}\underline{\hspace{5cm}}$\\
+			$1+\cos\alpha=\underline{\hspace{5cm}}$\\
+			$1-\cos\alpha=\underline{\hspace{5cm}}$\\
+			$1+\sin\alpha=\underline{\hspace{5cm}}$\\
+			$1-\sin\alpha=\underline{\hspace{5cm}}$\\
+			% \vspace{17pt}
+			$\sin^2\frac{\alpha}{2}=$\\
+			$\phantom{\sin^2\frac{\alpha}{2}=}\underline{\hspace{5cm}}$\\
+			$\cos^2\frac{\alpha}{2}=$\\
+			$\phantom{\cos^2\frac{\alpha}{2}=}\underline{\hspace{5cm}}$\\
+			$\tan^2\frac{\alpha}{2}=$\\
+			$\phantom{\tan^2\frac{\alpha}{2}=}\underline{\hspace{5cm}}$\\
+		\nextQuestion{半角公式}
+			$\sin\frac{\alpha}{2}=$\\
+			$\phantom{\sin\frac{\alpha}{2}=}\underline{\hspace{5cm}}$\\
+			$\cos\frac{\alpha}{2}=$\\
+			$\phantom{\cos\frac{\alpha}{2}=}\underline{\hspace{5cm}}$\\
+			$\tan\frac{\alpha}{2}=$\\
+			$\phantom{\tan\frac{\alpha}{2}=}\underline{\hspace{5cm}}$\\
+			$\phantom{\tan\frac{\alpha}{2}}=$\\
+			$\phantom{\tan\frac{\alpha}{2}=}\underline{\hspace{5cm}}$\\
+			$\phantom{\tan\frac{\alpha}{2}}=$\\
+			$\phantom{\tan\frac{\alpha}{2}=}\underline{\hspace{5cm}}$\\
+		\nextQuestion{化一公式}
+			$a\sin x+b\cos x=\underline{\hspace{5cm}}$
+
+
+\end{document}
