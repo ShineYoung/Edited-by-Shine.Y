@@ -1,0 +1,82 @@
+\documentclass{article}
+
+\usepackage[UTF8]{ctex}
+\usepackage{amsmath}
+\usepackage{fancyhdr}
+\usepackage{layout}
+\usepackage{flushend, cuted}
+\usepackage{mathpazo}
+\usepackage{tikz}
+
+\pagestyle{fancy}
+
+\addtolength{\hoffset}{-1.5cm}
+\addtolength{\voffset}{-2.5cm}
+\addtolength{\textwidth}{2.5cm}
+\addtolength{\textheight}{5cm}
+
+%\author{Shine Young}
+\newcommand*{\num}{10}
+
+\tikzset{elegant/.style={smooth,thick,sample=50,cyan}}
+\tikzset{eaxis/.style={->,>=stealth}}
+
+\begin{document}
+
+\thispagestyle{plain}
+
+\centerline{\Large \textbf{二次的 \dots 的超级特训}}
+\vspace{30pt}
+
+{\large“我眼中的大自然是一个我们只能非常不完美地理解的宏伟机构，这必然使一个沉思者充满了谦卑的感觉”}\\
+\rightline{\textbf{-- 阿尔伯特·爱因斯坦}}
+\vspace{30pt}
+
+
+一元二次类的函数、方程、不等式等在高中阶段有着很广的应用，所以掌握这种基本功将会让你事半功倍。每次一碰见涉及到这一类问题的题目，你就再也不会犯怵了。
+
+
+\section{二次函数}
+
+\begin{tabular}{c l l l}
+
+  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+  一般式 & $y=ax^2+bx+c$ & $x=-\frac{b}{2a}$ & $(-\frac{b}{2a},\frac{4ac-b^2}{4a})$ \\
+  顶点式 & $y=a(x-h)^2+k$ & $x=h$ & $(h,k)$ \\
+  交点式 & $y=a(x-x_1)(x-x_2)$ & $x=\frac{x_1+x_2}{2}$ &  \\
+
+\end{tabular}
+\vspace{20pt}
+
+\subsection{几点关于二次函数要特别记住的}
+
+\begin{itemize}
+  \item 在二次函数中，出现了： 对任意$t\in \mathbf{R}$, 都有 $\mathbf{f(a+t)=f(a-t)}$, 则该二次函数的对称轴为$x=a$.
+  \item $x_1+x_2=-\frac{b}{a}$\\$x_1x_2=\frac{c}{a}$
+  \item $(x_1-x_2)^2=(x_1+x_2)^2-4x_1x_2$
+\end{itemize}
+
+\subsection{二次函数图象}
+当$a>0$时
+\begin{tikzpicture}
+  
+  \draw[eaxis](-\num,0)--(\num,0) node[below]{$x$};
+  \draw[eaxis](-\num,0)--(\num,0) node[above]{$y$};
+  
+%  \draw[elegant, domain=-\num:\num] plot(\x, {x^2+2*x-1})
+  
+  
+\end{tikzpicture}
+
+
+\section{二次方程}
+
+
+
+
+\section{二次不等式}
+
+
+
+
+\end{document} 
